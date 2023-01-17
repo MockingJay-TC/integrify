@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { DotLoader } from "react-spinners";
 import UserComp from "../components/UserComp";
 
 const HomePage = () => {
@@ -18,11 +17,7 @@ const HomePage = () => {
     getUsers();
   }, []);
 
-  return loader ? (
-    <div className="flex justify-center items-center h-screen w-screen overflow-hidden ">
-      <DotLoader size="80px" color="#ca7c4e" />
-    </div>
-  ) : (
+  return  (
     <div className="my-5">
       <div className=" justify-content-center max-w-screen md:px-20 mx-auto">
       <div className="text-5xl font-semibold text-center text-[#786450] uppercase">All Users</div>
